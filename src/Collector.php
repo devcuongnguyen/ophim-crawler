@@ -29,10 +29,10 @@ class Collector
             'origin_name' => $info['origin_name'],
             'publish_year' => $info['year'],
             'content' => $info['content'],
-            'type' =>  $this->getMovieType($info, $episodes),
+            'type' => $this->getMovieType($info, $episodes),
             'status' => $info['status'],
             'thumb_url' => $this->getThumbImage($info['slug'], $info['thumb_url']),
-            'poster_url' => $this->getPosterImage($info['slug'], $info['poster_url']),
+            //'poster_url' => $this->getPosterImage($info['slug'], $info['poster_url']),
             'is_copyright' => $info['is_copyright'],
             'trailer_url' => $info['trailer_url'] ?? "",
             'quality' => $info['quality'],
@@ -86,9 +86,10 @@ class Collector
         try {
             $url = strtok($url, '?');
             $filename = substr($url, strrpos($url, '/') + 1);
-            $path = "images/{$slug}/{$filename}";
+            $path = "/thumb/{$filename}";
+            $storageDomain = Option::get('image_storage', 'https://img.vungtv.net');
 
-            if (Storage::disk('public')->exists($path) && $this->forceUpdate == false) {
+            if (Storage::disk('r2')->exists($path) && $this->forceUpdate == false) {
                 return Storage::url($path);
             }
 
@@ -109,11 +110,16 @@ class Collector
                 });
             }
 
-            Storage::disk('public')->put($path, null);
+            $img->save(storage_path("app/public" . $path));
 
-            $img->save(storage_path("app/public/" . $path));
+            Storage::disk('r2')->put($path, null);
 
-            return Storage::url($path);
+            if (file_exists(storage_path("app/public" . $path))) {
+                \File::delete(storage_path("app/public" . $path));
+            }
+
+            return $storageDomain . $path;
+
         } catch (\Exception $e) {
             Log::error($e->getMessage());
             return $url;

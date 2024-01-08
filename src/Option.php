@@ -105,6 +105,13 @@ class Option
                 'value' => 'https://ophim1.com',
                 'tab' => 'Setting'
             ],
+            'image_storage' => [
+                'name' => 'image_storage',
+                'label' => 'Image Storage Domain',
+                'type' => 'text',
+                'value' => 'https://img.vungtv.net',
+                'tab' => 'Setting'
+            ],
             'download_image' => [
                 'name' => 'download_image',
                 'label' => 'Tải ảnh khi crawl',
@@ -124,10 +131,10 @@ class Option
                 'default' => 200,
                 'attributes' => [
                     'placeholder' => 'Để trống nếu muốn giữ nguyên tỉ lệ',
-                    'class'       => 'form-control',
+                    'class' => 'form-control',
                 ],
                 'wrapper' => [
-                    'class'       => 'form-group col-md-6',
+                    'class' => 'form-group col-md-6',
                 ],
                 'tab' => 'Image Optimize'
             ],
@@ -137,10 +144,10 @@ class Option
                 'type' => 'number',
                 'attributes' => [
                     'placeholder' => 'Để trống nếu muốn giữ nguyên tỉ lệ',
-                    'class'       => 'form-control',
+                    'class' => 'form-control',
                 ],
                 'wrapper' => [
-                    'class'       => 'form-group col-md-6',
+                    'class' => 'form-group col-md-6',
                 ],
                 'tab' => 'Image Optimize'
             ],
@@ -157,10 +164,10 @@ class Option
                 'default' => 300,
                 'attributes' => [
                     'placeholder' => 'Để trống nếu muốn giữ nguyên tỉ lệ',
-                    'class'       => 'form-control',
+                    'class' => 'form-control',
                 ],
                 'wrapper' => [
-                    'class'       => 'form-group col-md-6',
+                    'class' => 'form-group col-md-6',
                 ],
                 'tab' => 'Image Optimize'
             ],
@@ -170,10 +177,10 @@ class Option
                 'type' => 'number',
                 'attributes' => [
                     'placeholder' => 'Để trống nếu muốn giữ nguyên tỉ lệ',
-                    'class'       => 'form-control',
+                    'class' => 'form-control',
                 ],
                 'wrapper' => [
-                    'class'       => 'form-group col-md-6',
+                    'class' => 'form-group col-md-6',
                 ],
                 'tab' => 'Image Optimize'
             ],
@@ -191,10 +198,10 @@ class Option
                 'default' => 1,
                 'attributes' => [
                     'placeholder' => '1',
-                    'class'       => 'form-control',
+                    'class' => 'form-control',
                 ],
                 'wrapper' => [
-                    'class'       => 'form-group col-md-4',
+                    'class' => 'form-group col-md-4',
                 ],
                 'tab' => 'Schedule'
             ],
@@ -205,34 +212,34 @@ class Option
                 'default' => 2,
                 'attributes' => [
                     'placeholder' => '2',
-                    'class'       => 'form-control',
+                    'class' => 'form-control',
                 ],
                 'wrapper' => [
-                    'class'       => 'form-group col-md-4',
+                    'class' => 'form-group col-md-4',
                 ],
                 'tab' => 'Schedule'
             ],
             'crawler_schedule_cron_config' => [
-                'name'        => 'crawler_schedule_cron_config',
-                'label'       => 'Cron config',
-                'type'        => 'text',
-                'default'     => '* * * * *',
-                'hint'        => '<a target="_blank" href="https://crontab.guru/every-10-minutes">See more</a>',
+                'name' => 'crawler_schedule_cron_config',
+                'label' => 'Cron config',
+                'type' => 'text',
+                'default' => '* * * * *',
+                'hint' => '<a target="_blank" href="https://crontab.guru/every-10-minutes">See more</a>',
                 'attributes' => [
                     'placeholder' => '* * * * * *',
-                    'class'       => 'form-control',
+                    'class' => 'form-control',
                 ],
                 'wrapper' => [
-                    'class'       => 'form-group col-md-4',
+                    'class' => 'form-group col-md-4',
                 ],
-                'tab'   => 'Schedule'
+                'tab' => 'Schedule'
             ],
             'crawler_schedule_excludedType' => [
                 'name' => 'crawler_schedule_excludedType',
                 'label' => 'Bỏ qua định dạng',
                 'type' => 'select_from_array',
-                'options'         => ['series' => 'Phim Bộ', 'single' => 'Phim Lẻ', 'hoathinh' => 'Hoạt Hình', 'tvshows' => 'TV Shows'],
-                'allows_null'     => false,
+                'options' => ['series' => 'Phim Bộ', 'single' => 'Phim Lẻ', 'hoathinh' => 'Hoạt Hình', 'tvshows' => 'TV Shows'],
+                'allows_null' => false,
                 'allows_multiple' => true,
                 'tab' => 'Schedule'
             ],
@@ -240,8 +247,8 @@ class Option
                 'name' => 'crawler_schedule_excludedCategories',
                 'label' => 'Bỏ qua thể loại',
                 'type' => 'select_from_array',
-                'options'         => $categories,
-                'allows_null'     => false,
+                'options' => $categories,
+                'allows_null' => false,
                 'allows_multiple' => true,
                 'tab' => 'Schedule'
             ],
@@ -249,8 +256,8 @@ class Option
                 'name' => 'crawler_schedule_excludedRegions',
                 'label' => 'Bỏ qua quốc gia',
                 'type' => 'select_from_array',
-                'options'         => $regions,
-                'allows_null'     => false,
+                'options' => $regions,
+                'allows_null' => false,
                 'allows_multiple' => true,
                 'tab' => 'Schedule'
             ],
@@ -259,8 +266,8 @@ class Option
                 'label' => 'Field cập nhật',
                 'type' => 'select_from_array',
                 'default' => array_keys($fields),
-                'options'         => $fields,
-                'allows_null'     => false,
+                'options' => $fields,
+                'allows_null' => false,
                 'allows_multiple' => true,
                 'tab' => 'Schedule'
             ],
