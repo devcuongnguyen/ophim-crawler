@@ -1,0 +1,33 @@
+{
+  "name": "devcuongnguyen/ophim-crawler",
+  "description": "ophim crawler",
+  "type": "package",
+  "require": {
+    "devcuongnguyen/ophim-core": "^1.0.0",
+    "intervention/image": "^2.7",
+    "league/flysystem-aws-s3-v3": "^1.0"
+  },
+  "require-dev": {
+    "devcuongnguyen/crud": "^1.0.0"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Ophim\\Crawler\\OphimCrawler\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "devcuongnguyen",
+      "email": "hacoi.dev@gmail.com"
+    }
+  ],
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Ophim\\Crawler\\OphimCrawler\\OphimCrawlerServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "stable"
+}
