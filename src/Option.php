@@ -28,7 +28,7 @@ class Option
     //     $options[$name] = $value;
 
     //     return Setting::updateOrCreate([
-    //         'key' => 'hacoidev/ophim-crawler.options',
+    //         'key' => 'devcuongnguyen/ophim-crawler.options',
     //     ], [
     //         'name' => 'Options',
     //         'field' => json_encode(['name' => 'value', 'type', 'hidden']),
@@ -41,7 +41,7 @@ class Option
     public static function getEntry()
     {
         return Setting::firstOrCreate([
-            'key' => 'hacoidev/ophim-crawler.options',
+            'key' => 'devcuongnguyen/ophim-crawler.options',
         ], [
             'name' => 'Options',
             'field' => json_encode(['name' => 'value', 'type', 'hidden']),

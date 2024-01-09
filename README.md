@@ -11,16 +11,16 @@
 ![Alt text](https://i.ibb.co/5jY3s2P/CRAWLER-SCHEDULE.png "Options Page")
 
 ## Requirements
-https://github.com/hacoidev/ophim-core
+https://github.com/devcuongnguyen/ophim-core
 
 ## Install
-- Tại thư mục của Project: `composer require hacoidev/ophim-crawler`
+- Tại thư mục của Project: `composer require devcuongnguyen/ophim-crawler`
 
 ## Update
-- Tại thư mục của Project: `composer update hacoidev/ophim-crawler`
+- Tại thư mục của Project: `composer update devcuongnguyen/ophim-crawler`
 
 ## Setup Crontab
-[Setup crontab, add this entry](https://github.com/hacoidev/ophim-core#reset-view-counter)
+[Setup crontab, add this entry](https://github.com/devcuongnguyen/ophim-core#reset-view-counter)
 
 ## Changelog
 ### 1.1.0

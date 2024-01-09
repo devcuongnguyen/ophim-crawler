@@ -23,10 +23,10 @@ class OphimCrawlerServiceProvider extends SP
     {
 
         config(['plugins' => array_merge(config('plugins', []), [
-            'hacoidev/ophim-crawler' =>
+            'devcuongnguyen/ophim-crawler' =>
             [
                 'name' => 'Ophim Crawler',
-                'package_name' => 'hacoidev/ophim-crawler',
+                'package_name' => 'devcuongnguyen/ophim-crawler',
                 'icon' => 'la la-hand-grab-o',
                 'entries' => [
                     ['name' => 'Crawler', 'icon' => 'la la-hand-grab-o', 'url' => backpack_url('/plugin/ophim-crawler')],
@@ -38,7 +38,7 @@ class OphimCrawlerServiceProvider extends SP
         config(['logging.channels' => array_merge(config('logging.channels', []), [
             'ophim-crawler' => [
                 'driver' => 'daily',
-                'path' => storage_path('logs/hacoidev/ophim-crawler.log'),
+                'path' => storage_path('logs/devcuongnguyen/ophim-crawler.log'),
                 'level' => env('LOG_LEVEL', 'debug'),
                 'days' => 7,
             ],
