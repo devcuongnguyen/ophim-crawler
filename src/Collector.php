@@ -90,7 +90,7 @@ class Collector
             $storageUrl = Option::get('image_storage', 'https://img.vungtv.net/');
 
             if (Storage::disk('r2')->exists($path) && $this->forceUpdate == false) {
-                return $storageUrl . $path;
+                return $storageUrl . '/' . $path;
             }
 
             // Khởi tạo curl để tải về hình ảnh
@@ -121,7 +121,7 @@ class Collector
                 \File::delete(storage_path("app/public/" . $path));
             }
 
-            return $storageUrl . $path;
+            return $storageUrl . '/' . $path;
 
 
         } catch (\Exception $e) {
